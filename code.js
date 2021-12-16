@@ -90,20 +90,33 @@
 
 
 
-function sayHello(name){
-    if(Array.isArray(name)){
-        return "Hello, World!";
+// function sayHello(name){
+//     if(Array.isArray(name)){
+//         return "Hello, World!";
+//     }
+//     if(name === "4"){
+//         return "Hello, World!";
+//     }
+//     if(name === 4){
+//         return "Hello, World!";
+//     }
+//     if(name === ""){
+//         return "Hello, World!";
+//     }
+//     return "Hello, " + name + "!";
+// }
+
+function isFive(aNumber){
+    if (aNumber === 10){
+        return false;
     }
-    if(name === "4"){
-        return "Hello, World!";
+    if (aNumber === "5"){
+        return true;
     }
-    if(name === 4){
-        return "Hello, World!";
+    if (aNumber === 5){
+        return true;
     }
-    if(name === ""){
-        return "Hello, World!";
-    }
-    return "Hello, " + name + "!";
+    return true;
 }
 
 

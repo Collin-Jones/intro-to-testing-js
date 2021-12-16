@@ -159,36 +159,85 @@
 //     the input is another data type like an array, object, or function?
 
 
-describe('sayHello', function () {
+// describe('sayHello', function () {
+//     it('should be a defined function', function () {
+//         expect(typeof sayHello).toBe('function')
+//     });
+//     it('should return a string when called', function () {
+//         expect(typeof sayHello()).toBe("string");
+//     });
+//     it("should return 'Hello, Alex' when called with the name 'Alex'", function () {
+//         expect(sayHello("Alex")).toBe("Hello, Alex!");
+//     });
+//     it("should return 'Hello, Pat!' when called with the name 'Pat'", function () {
+//         expect(sayHello("Pat")).toBe("Hello, Pat!");
+//     });
+//     it("should return 'Hello, World!'when called with 'empty string'", function () {
+//         expect(sayHello("")).toBe("Hello, World!");
+//     });
+//     it("should return 'Hello, World!' when called with a 'number'", function () {
+//         expect(sayHello(4)).toBe("Hello, World!")
+//     });
+//     it("should return 'Hello, World!' when called with a 'number in a string'", function () {
+//         expect(sayHello("4")).toBe("Hello, World!")
+//     });
+//     it("should return 'Hello, World!' when called with a 'array' []", function () {
+//         expect(sayHello([])) .toBe("Hello, World!")
+//     });
+// });
+
+
+// Exercise #10 Let's Test-Drive an isFive function!
+// Inside of tests.js, write a describe block for our new isFive function.
+// As your first, failing test, write an it and an expect asserting that a function named isFive exists.
+//     Run the tests by refreshing report.html to show the red, failing test.
+//     Write just enough code inside of code.js to define an empty function for isFive.
+//     Now, refresh report.html to ensure that all tests are green.
+//     What other tests and implementation cycles should you do for isFive?
+// Ensure that isFive returns a boolean no matter what the input
+// Ensure that isFive returns true when passed 5
+// What about if we pass in the string "5"? Do you want isFive to return true for that?
+// If so, write the test, ensure that the test is failing, and then write the implementation
+// Commit your work to git and push to GitHub before moving forward.
+
+describe('isFive', function () {
     it('should be a defined function', function () {
-        expect(typeof sayHello).toBe('function')
+        expect(typeof isFive) .toBe('function');
     });
-    it('should return a string when called', function () {
-        expect(typeof sayHello()).toBe("string");
+    it('should return a boolean when called ', function () {
+        expect(typeof isFive()) .toBe ("boolean");
     });
-    it("should return 'Hello, Alex' when called with the name 'Alex'", function () {
-        expect(sayHello("Alex")).toBe("Hello, Alex!");
+    it('should return true when passed as 5', function () {
+        expect(isFive(5)) .toBe(true);
     });
-    it("should return 'Hello, Pat!' when called with the name 'Pat'", function () {
-        expect(sayHello("Pat")).toBe("Hello, Pat!");
+    it('should return true when passed as "5"', function () {
+        expect(isFive("5")) .toBe(true);
     });
-    it("should return 'Hello, World!'when called with 'empty string'", function () {
-        expect(sayHello("")).toBe("Hello, World!");
-    });
-    it("should return 'Hello, World!' when called with a 'number'", function () {
-        expect(sayHello(4)).toBe("Hello, World!")
-    });
-    it("should return 'Hello, World!' when called with a 'number in a string'", function () {
-        expect(sayHello("4")).toBe("Hello, World!")
-    });
-    it("should return 'Hello, World!' when called with a 'array' []", function () {
-        expect(sayHello([])) .toBe("Hello, World!")
+    it('should return true when passed as 10', function () {
+        expect(isFive(10)) .toBe(false);
+
     });
 });
 
-
-
-
+// Exercise #11 TDD process for testing and creating an isEven function
+// Start with the smallest tests first. Assert that the function is defined.
+//     Write just enough code to green the test
+// Build up functionality one small piece at a time.
+//     Write each assertion, confirm the test fails, write only enough code to green that specific test, refactor, then repeat.
+//     Remember to add and then "green" one test at a time. That's part of the fundamental approach of TDD.
+// Assert that isEven:
+//     returns a boolean no matter the input
+// returns true when executed with isEven(2)
+//     returns true when executed with isEven(-4)
+//     returns false when executed with isEven(3)
+//     returns false when called with isEven("banana")
+//     returns true when called with isEven("8")
+//     returns false when called with isEven(Infinity)
+//     return false when called with a boolean input like isEven(true) or isEven(false)
+// returns false when called without an argument like isEven()
+// Refactor when and where you can. Be careful not to refactor before you have a handful of green tests.
+//     Repeat until the tests are robust and the function works as intended.
+//     Commit your work to git and push to GitHub before moving forward.
 
 
 
