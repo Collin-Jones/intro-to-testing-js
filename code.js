@@ -77,9 +77,9 @@
 // Step 5: If you feel the urge to refactor already, hang on! Let's add one more test!
 // Step 6: Repeat the TDD cycle, so let's add another test in the next exercise.
 
-function sayHello(name){
-    return "Hello, " + name + "!"
-}
+// function sayHello(name){
+//     return "Hello, " + name + "!"
+// }
 
 // Exercise #5 One more test before refactoring...
 // Step 1: Add another (tiny) assertion! In tests.js, assert that sayHello("Pat") returns "Hello, Pat!". Since our tests should be super simple, the assertion should be expect(sayHello("Pat")).toBe("Hello, Pat!")
@@ -87,6 +87,24 @@ function sayHello(name){
 //     Step 3: Again, you may feel the urge to jump to the "correct" answer already. Let's stay on target. Write just enough code to green the test. For this case, just enough code means adding another conditional such that if input === "Pat", then the function should have return "Hello, Pat!".
 // Step 4: Run all tests. Does each test turn green? If so, then we can proceed.
 //     Step 5: Refactor! It's definitely refactoring time!
+
+
+
+function sayHello(name){
+    if(Array.isArray(name)){
+        return "Hello, World!";
+    }
+    if(name === "4"){
+        return "Hello, World!";
+    }
+    if(name === 4){
+        return "Hello, World!";
+    }
+    if(name === ""){
+        return "Hello, World!";
+    }
+    return "Hello, " + name + "!";
+}
 
 
 

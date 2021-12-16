@@ -80,8 +80,6 @@
 // Step 6: Repeat step means to add another test, so let's move to the next exercise.
 
 
-
-
 // Exercise #4 Add another small, simple test
 // Step 1: In tests.js, assert that sayHello("Alex") returns "Hello, Alex!". Our first test should be super simple and super small. This means that our next test should look like expect(sayHello("Alex")).toBe("Hello, Alex!").
 //     Step 2: Run all tests and make sure that this newly added test is red.
@@ -104,7 +102,6 @@
 //     });
 // });
 //
-
 
 
 // Exercise #5 One more test before refactoring...
@@ -135,6 +132,33 @@
 //     If we have return "Hello, " + input + "!";, does this work for all names?
 //     Does this bring up any other issues with other inputs?
 
+// Exercise #7 Add, commit, and push your work to GitHub.
+// "If your code ain't checked-in to source control, then it doesn't exist."
+// In your terminal, ensure that the pwd command shows that you're in the directory for this project.
+// First, git status. Notice which files are tracked by git and which files have changes.
+//     Second, type git add -A to tell git that you want to get all the changed files staged for commit.
+// Now, type git status. You should see file names in green. This means that the files are ready for commit.
+// Next, type git commit -m "add tests and ability to say 'hello' to any input."
+// Type git status, again, to make sure that all files are added and committed.
+//     Finally, push your work with git push.
+
+// Exercise #8 "Repeat" step (where we look for additional tests to add)
+// First, in tests.js, add expect(sayHello()).toBe("Hello, World!"). Then refresh report.html to see the failing test.
+//     Follow that by adding just enough code inside of the sayHello function code.js to green that latest test. Recommend checking if the input variable's value is undefined.
+// Next, add expect(sayHello(true)).toBe("Hello, World!") to the tests.js file. Refresh to see the failing red test.
+//     Add just enough code to code.js to green that latest test. if (input === true) then return "Hello, World!"
+// Now, add expect(sayHello(false)).toBe("Hello, World!") to the tests.js file. Refresh to see the failing test.
+//     Add just enough code to code.js to green this test.
+//     Once all the tests are green, identify refactor opportunities and refactor your solution.
+//     Are there any other edge cases you want to write a test for? You have a green light to add more of your own tests to "drive" the implementation.
+//     Some edge cases to consider. What if:
+// the input is null?
+//     the input is an empty string like ""?
+//     the input is a number like 2.3?
+//     the input is a number inside a string like "5"?
+//     the input is another data type like an array, object, or function?
+
+
 describe('sayHello', function () {
     it('should be a defined function', function () {
         expect(typeof sayHello).toBe('function')
@@ -143,10 +167,22 @@ describe('sayHello', function () {
         expect(typeof sayHello()).toBe("string");
     });
     it("should return 'Hello, Alex' when called with the name 'Alex'", function () {
-        expect(sayHello("Alex")) .toBe("Hello, Alex!");
+        expect(sayHello("Alex")).toBe("Hello, Alex!");
     });
     it("should return 'Hello, Pat!' when called with the name 'Pat'", function () {
-        expect(sayHello("Pat")) .toBe("Hello, Pat!");
+        expect(sayHello("Pat")).toBe("Hello, Pat!");
+    });
+    it("should return 'Hello, World!'when called with 'empty string'", function () {
+        expect(sayHello("")).toBe("Hello, World!");
+    });
+    it("should return 'Hello, World!' when called with a 'number'", function () {
+        expect(sayHello(4)).toBe("Hello, World!")
+    });
+    it("should return 'Hello, World!' when called with a 'number in a string'", function () {
+        expect(sayHello("4")).toBe("Hello, World!")
+    });
+    it("should return 'Hello, World!' when called with a 'array' []", function () {
+        expect(sayHello([])) .toBe("Hello, World!")
     });
 });
 
