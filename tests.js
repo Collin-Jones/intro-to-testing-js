@@ -200,24 +200,24 @@
 // If so, write the test, ensure that the test is failing, and then write the implementation
 // Commit your work to git and push to GitHub before moving forward.
 
-describe('isFive', function () {
-    it('should be a defined function', function () {
-        expect(typeof isFive) .toBe('function');
-    });
-    it('should return a boolean when called ', function () {
-        expect(typeof isFive()) .toBe ("boolean");
-    });
-    it('should return true when passed as 5', function () {
-        expect(isFive(5)) .toBe(true);
-    });
-    it('should return true when passed as "5"', function () {
-        expect(isFive("5")) .toBe(true);
-    });
-    it('should return true when passed as 10', function () {
-        expect(isFive(10)) .toBe(false);
-
-    });
-});
+// describe('isFive', function () {
+//     it('should be a defined function', function () {
+//         expect(typeof isFive) .toBe('function');
+//     });
+//     it('should return a boolean when called ', function () {
+//         expect(typeof isFive()) .toBe ("boolean");
+//     });
+//     it('should return true when passed as 5', function () {
+//         expect(isFive(5)) .toBe(true);
+//     });
+//     it('should return true when passed as "5"', function () {
+//         expect(isFive("5")) .toBe(true);
+//     });
+//     it('should return true when passed as 10', function () {
+//         expect(isFive(10)) .toBe(false);
+//
+//     });
+// });
 
 // Exercise #11 TDD process for testing and creating an isEven function
 // Start with the smallest tests first. Assert that the function is defined.
@@ -227,19 +227,78 @@ describe('isFive', function () {
 //     Remember to add and then "green" one test at a time. That's part of the fundamental approach of TDD.
 // Assert that isEven:
 //     returns a boolean no matter the input
-// returns true when executed with isEven(2)
+//     returns true when executed with isEven(2)
 //     returns true when executed with isEven(-4)
 //     returns false when executed with isEven(3)
 //     returns false when called with isEven("banana")
 //     returns true when called with isEven("8")
 //     returns false when called with isEven(Infinity)
 //     return false when called with a boolean input like isEven(true) or isEven(false)
-// returns false when called without an argument like isEven()
+//     returns false when called without an argument like isEven()
 // Refactor when and where you can. Be careful not to refactor before you have a handful of green tests.
 //     Repeat until the tests are robust and the function works as intended.
 //     Commit your work to git and push to GitHub before moving forward.
 
+describe('isEven', function () {
+    it('should be a defined function', function () {
+        expect(typeof isEven) .toBe('function');
+    });
+    it('should return a boolean when called ', function () {
+        expect(typeof isEven()) .toBe ("boolean");
+    });
+    it('should return true when passed as 2', function () {
+        expect(isEven(2)) .toBe(true);
+    });
+    it('should return true when passed as -4', function () {
+        expect(isEven(-4)) .toBe(true);
+    });
+    it('should return false when passed as 3', function () {
+        expect(isEven(3)) .toBe(false);
+    });
+    it('should return false when passed as "banana"', function () {
+        expect(isEven("banana")).toBe(false);
+    });
+    it('should return true when passed as "8"', function () {
+        expect(isEven("8")) .toBe(true);
+    });
+    it('should return false when passed as Infinity', function () {
+        expect(isEven(Infinity)) .toBe(false);
+    });
+    it('should return false when passed as either true or false', function () {
+        expect(isEven(true)).toBe(false);
+    });
+    it('should return false when passed without an argument', function () {
+        expect(isEven()).toBe(true);
+    });
+});
 
+
+// describe('isVowel', function () {
+//     it('should be a defined function', function () {
+//         expect(typeof isVowel) .toBe('function');
+//     });
+//     it('should return a boolean when called ', function () {
+//         expect(typeof isVowel()) .toBe ("boolean");
+//     });
+//     it('should return true when passed as 2', function () {
+//         expect(isVowel(2)) .toBe(true);
+//     });
+//     it('should return true when passed as -4', function () {
+//         expect(isVowel(-4)) .toBe(true);
+//     });
+//     it('should return true when passed as 3', function () {
+//         expect(isVowel(3)) .toBe(false);
+//     });
+//     it('should return true when passed as "banana"', function () {
+//         expect(isVowel("banana")).toBe(false);
+//     });
+//     it('should return true when passed as "8"', function () {
+//         expect(isVowel("8")) .toBe(true);
+//     });
+//     it('should return true when passed as Infinity', function () {
+//         expect(isVowel(Infinity)) .toBe(false);
+//     });
+// });
 
 
 

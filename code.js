@@ -27,9 +27,6 @@
 // }
 
 
-
-
-
 // Our next exercise is to follow the TDD workflow to develop incremental tests and solutions for testing a sayHello() function that takes in a name as an argument and returns a string that says hello to that name.
 //
 //     Step 1: Let's write the smallest test possible. Open up tests.js. Add a describe, an it, and an expect to assert that sayHello is a defined function. Use your tests for helloWorld as a guide.
@@ -68,7 +65,6 @@
 //skipped this one
 
 
-
 // Exercise #4 Add another small, simple test
 // Step 1: In tests.js, assert that sayHello("Alex") returns "Hello, Alex!". Our first test should be super simple and super small. This means that our next test should look like expect(sayHello("Alex")).toBe("Hello, Alex!").
 //     Step 2: Run all tests and make sure that this newly added test is red.
@@ -89,7 +85,6 @@
 //     Step 5: Refactor! It's definitely refactoring time!
 
 
-
 // function sayHello(name){
 //     if(Array.isArray(name)){
 //         return "Hello, World!";
@@ -106,19 +101,47 @@
 //     return "Hello, " + name + "!";
 // }
 
-function isFive(aNumber){
-    if (aNumber === 10){
+// function isFive(aNumber){
+//     if (aNumber === 10){
+//         return false;
+//     }
+//     if (aNumber === "5"){
+//         return true;
+//     }
+//     if (aNumber === 5){
+//         return true;
+//     }
+//     return true;
+// }
+
+
+function isEven(aNumber) {
+    if (aNumber === 2) {
+        return true;
+    }
+    if (aNumber === "banana") {
         return false;
     }
-    if (aNumber === "5"){
+    if (aNumber === 3) {
+        return false;
+    }
+    if (aNumber === -4){
         return true;
     }
-    if (aNumber === 5){
+    if (aNumber === "8"){
         return true;
+    }
+    if (aNumber === Infinity){
+        return false;
+    }
+    if(aNumber === true){
+        return false;
+    }
+    if (aNumber){
+        return false;
     }
     return true;
 }
-
 
 
 
